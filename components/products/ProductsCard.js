@@ -1,15 +1,14 @@
 import { getDiscountedPrice } from "@/utils/getDiscountedPrice";
 import Link from "next/link";
+import React from "react";
 
 export default function ProductsCard({ product = {} }) {
   return (
-    <div className="ring-1 p-2 rounded grid shadow-md ring-black/10 hover:scale-105 transition-transform duration-500 hover:shadow-xl overflow-hidden">
-      <div className="h-full w-full object-cover">
-        <div
-          className="relative delay-150 w-180px lg:w-[270px] h-[205px] lg:h-[310px] bg-[#f8f8f8]  bg-cover bg-center transition-all duration-500 ease-in-out transform "
-          style={{ backgroundImage: `url(${product?.thumbnail})` }}
-        ></div>
-      </div>
+    <div className="ring-1 p-2 rounded grid shadow-md ring-black/10 hover:scale-105 transition-transform duration-500 hover:shadow-xl overflow-hidden fade-in w-full">
+      <div
+        className="relative delay-150 w-[180px] lg:w-[290px] rounded-md h-[205px] lg:h-[310px] bg-[#f8f8f8]  bg-cover bg-center transition-all duration-300 ease-in-out transform"
+        style={{ backgroundImage: `url(${product?.thumbnail})` }}
+      ></div>
 
       <h2 className="text-sm lg:text-base mt-2">
         <Link className="text-base font-bold" href={`/products/${product?.id}`}>
@@ -27,7 +26,7 @@ export default function ProductsCard({ product = {} }) {
       <p className="text-[#919090] text-sm ">{product?.description}</p>
 
       <p className="text-rose-600 text-sm mt-4">
-        <span className="text-[#919090] line-through font-bold">
+        <span className="text-[#919090] line-through">
           ${product?.price?.toFixed(2)}
         </span>
         ${getDiscountedPrice(product)}

@@ -1,28 +1,24 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import { usePathname } from "next/navigation";
-import React from "react";
 
 export default function Category() {
   const pathname = usePathname();
 
-  // Function to convert category name to lowercase and replace spaces with dashes
   const formatCategoryName = (name) => {
-    return "category/" + name.toLowerCase().replace(/\s+/g, "-");
+    return "category/" + name.toLowerCase();
   };
 
-  // Function to determine if a link should be active
   const isActive = (name) => {
-    // console.log(pathname);
     return pathname === `/${formatCategoryName(name)}`;
-    // return true;
   };
 
   return (
-    <div className="w-full flex items-center justify-between lg:block lg:w-2/12 my-10 lg:my-0 lg:mt-4">
+    <div className="flex items-center justify-between lg:block lg:w-4/12 my-10 lg:my-0 lg:mt-4 sticky top-20">
+      <p className="text-xl font-bold py-2">Categories</p>
+      <hr />
       <Link
-        className={`hover:border-b border-black block h-6 box-border mt-4 ${
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 py-2 ${
           isActive("All") ? "active" : ""
         }`}
         href={`/${formatCategoryName("All")}`}
@@ -30,7 +26,7 @@ export default function Category() {
         All
       </Link>
       <Link
-        className={`hover:border-b border-black block h-6 box-border mt-5 ${
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 ${
           isActive("Smartphones") ? "active" : ""
         }`}
         href={`/${formatCategoryName("Smartphones")}`}
@@ -38,7 +34,7 @@ export default function Category() {
         Smartphones
       </Link>
       <Link
-        className={`hover:border-b border-black block h-6 box-border mt-5 ${
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 ${
           isActive("Laptops") ? "active" : ""
         }`}
         href={`/${formatCategoryName("Laptops")}`}
@@ -46,7 +42,7 @@ export default function Category() {
         Laptops
       </Link>
       <Link
-        className={`hover:border-b border-black block h-6 box-border mt-5 ${
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 ${
           isActive("Fragrances") ? "active" : ""
         }`}
         href={`/${formatCategoryName("Fragrances")}`}
@@ -54,7 +50,7 @@ export default function Category() {
         Fragrances
       </Link>
       <Link
-        className={`hover:border-b border-black block h-6 box-border mt-5 ${
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 ${
           isActive("Skincare") ? "active" : ""
         }`}
         href={`/${formatCategoryName("Skincare")}`}
@@ -62,7 +58,7 @@ export default function Category() {
         Skincare
       </Link>
       <Link
-        className={`hover:border-b border-black block h-6 box-border mt-5 ${
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 ${
           isActive("Groceries") ? "active" : ""
         }`}
         href={`/${formatCategoryName("Groceries")}`}

@@ -14,8 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Nav />
-        <main className="min-h-[65vh]">{children}</main>
+        <div className="fixed w-full bg-white z-50 shadow-black shadow-yellow-400">
+          <Nav />
+        </div>
+        <main className="min-h-[65vh] pt-20">{children}</main>
         <footer className="w-11/12 lg:w-10/12 max-w-7xl mx-auto flex flex-wrap items-center justify-between py-10 lg:py-16">
           <Footer />
         </footer>

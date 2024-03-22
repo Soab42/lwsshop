@@ -40,6 +40,7 @@ export default function ProductCarousel({ product }) {
         thumbLink={product?.images[imageIndex]}
         key={imageIndex}
       />
+      {/* <PreviewComponents imageIndex={imageIndex} product={product} /> */}
 
       <div className="flex gap-4 mt-4">
         {product?.images.map((image, i) => (

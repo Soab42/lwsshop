@@ -5,7 +5,7 @@ export default function CategoryLayout({ children }) {
   return (
     <>
       <Hero />
-      <section>{children}</section>
+      <section className="w-full">{children}</section>
       <Subscribe />
     </>
   );

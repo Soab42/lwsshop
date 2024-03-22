@@ -12,8 +12,12 @@ export const useProduct = () => {
 
 export const useCategoryProducts = () => {
   const params = useParams();
-  const CategoryProducts = Products.filter(
-    (category) => category.category === params.category
-  );
-  return CategoryProducts;
+  if (params.category === "all") {
+    return Products;
+  } else {
+    const CategoryProducts = Products.filter(
+      (category) => category.category === params.category
+    );
+    return CategoryProducts;
+  }
 };
