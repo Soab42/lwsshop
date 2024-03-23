@@ -10,7 +10,7 @@
     @apply flex justify-center items-center;
   }
   .active {
-    @apply bg-[#ffd160] hover:bg-[#e4be60] border-b;
+    @apply bg-[#ffd160]/40 hover:bg-[#e4be60]/70 border-b;
   }
 }
 

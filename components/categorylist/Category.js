@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 export default function Category() {
   const pathname = usePathname();
-
+  console.log(pathname);
   const formatCategoryName = (name) => {
     return "category/" + name.toLowerCase();
   };
@@ -18,15 +18,15 @@ export default function Category() {
       <p className="text-xl font-bold py-2">Categories</p>
       <hr />
       <Link
-        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 py-2 ${
-          isActive("All") ? "active" : ""
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 duration-500 py-2 ${
+          pathname === "/category" ? "active" : ""
         }`}
-        href={`/${formatCategoryName("All")}`}
+        href={"/category"}
       >
         All
       </Link>
       <Link
-        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 ${
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 duration-500 ${
           isActive("Smartphones") ? "active" : ""
         }`}
         href={`/${formatCategoryName("Smartphones")}`}
@@ -34,7 +34,7 @@ export default function Category() {
         Smartphones
       </Link>
       <Link
-        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 ${
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 duration-500 ${
           isActive("Laptops") ? "active" : ""
         }`}
         href={`/${formatCategoryName("Laptops")}`}
@@ -42,7 +42,7 @@ export default function Category() {
         Laptops
       </Link>
       <Link
-        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 ${
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 duration-500 ${
           isActive("Fragrances") ? "active" : ""
         }`}
         href={`/${formatCategoryName("Fragrances")}`}
@@ -50,7 +50,7 @@ export default function Category() {
         Fragrances
       </Link>
       <Link
-        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 ${
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 duration-500 ${
           isActive("Skincare") ? "active" : ""
         }`}
         href={`/${formatCategoryName("Skincare")}`}
@@ -58,7 +58,7 @@ export default function Category() {
         Skincare
       </Link>
       <Link
-        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 ${
+        className={`hover:border-b border-black block h-9 p-2 box-border mt-4 duration-500 ${
           isActive("Groceries") ? "active" : ""
         }`}
         href={`/${formatCategoryName("Groceries")}`}

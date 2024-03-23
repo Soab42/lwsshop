@@ -3,7 +3,6 @@ import ProductsSection from "@/components/nav/ProductsSection";
 import Subscribe from "@/components/nav/Subscribe";
 
 function Home() {
-  <title>Learn with Sumit</title>;
   return (
     <>
       <Hero />

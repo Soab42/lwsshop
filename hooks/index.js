@@ -12,7 +12,7 @@ export const useProduct = () => {
 
 export const useCategoryProducts = () => {
   const params = useParams();
-  if (params.category === "all") {
+  if (!params.category) {
     return Products;
   } else {
     const CategoryProducts = Products.filter(
