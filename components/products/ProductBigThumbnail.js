@@ -11,8 +11,8 @@ export default function ProductBigThumbnail({
     <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <Image
         src={thumbLink}
-        className="w-[800px] h-[500px] mx-auto object-contain fade-in "
-        alt=""
+        className="w-[800px] h-[500px] mx-auto object-contain fade-in"
+        alt="Product thumbnail"
         ref={imageRef}
         width={1800}
         height={1000}

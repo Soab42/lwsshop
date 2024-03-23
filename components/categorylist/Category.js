@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 
 export default function Category() {
   const pathname = usePathname();
-  console.log(pathname);
   const formatCategoryName = (name) => {
     return "category/" + name.toLowerCase();
   };

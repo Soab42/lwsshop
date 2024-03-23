@@ -1,10 +1,9 @@
 import { getDiscountedPrice } from "@/utils/getDiscountedPrice";
 import Link from "next/link";
-import React from "react";
 
 export default function ProductsCard({ product = {} }) {
   return (
-    <div className="ring-1 p-2  rounded grid shadow-md ring-black/10 hover:scale-105 transition-transform duration-500 hover:shadow-xl overflow-hidden fade-in w-full">
+    <div className="ring-1 p-2  rounded grid shadow-md ring-black/10 hover:scale-105 transition-transform duration-500 hover:shadow-xl overflow-hidden fade-in  w-full">
       <div
         className="relative delay-150 lg:w-full rounded-md h-[205px] lg:h-[310px] bg-[#f8f8f8]  bg-cover bg-center transition-all duration-300 ease-in-out transform"
         style={{ backgroundImage: `url(${product?.thumbnail})` }}
@@ -17,7 +16,7 @@ export default function ProductsCard({ product = {} }) {
         <span className="text-[#919090]">
           <Link
             href={`/category/${product?.category}`}
-            classNameName="hover:text-yellow-600 border-b capitalize"
+            className="hover:text-yellow-600 border-b capitalize"
           >
             ({product?.category})
           </Link>

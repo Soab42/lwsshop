@@ -16,7 +16,7 @@ export default function Nav() {
           <Link href="/">
             <Image
               src="/assets/lws-logo-black.svg"
-              className="h-10"
+              className="h-10 w-40"
               alt=""
               height={200}
               width={200}
