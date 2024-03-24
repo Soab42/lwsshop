@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useState } from "react";
 import ProductBigThumbnail from "./ProductBigThumbnail";
 import ProductSmallThumbnail from "./ProductSmallThumbnail";

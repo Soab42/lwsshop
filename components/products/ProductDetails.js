@@ -1,8 +1,7 @@
-import Link from "next/link";
-import React from "react";
-import Rating from "./Rating";
-import ProductPrice from "./ProductPrice";
 import { getDiscountedPrice } from "@/utils/getDiscountedPrice";
+import Link from "next/link";
+import ProductPrice from "./ProductPrice";
+import Rating from "./Rating";
 
 export default function ProductDetails({ product }) {
   return (

@@ -1,9 +1,8 @@
-"use client";
 import ProductsCard from "@/components/products/ProductsCard";
-import { useCategoryProducts } from "@/hooks";
+import { getCategoryProducts } from "@/utils";
 
-export default function CategoryProducts() {
-  const CategoryProducts = useCategoryProducts();
+export default function CategoryProducts({ params: { category } }) {
+  const CategoryProducts = getCategoryProducts(category);
   if (CategoryProducts.length === 0)
     return (
       <div className="flex-center h-36 text-3xl text-rose-900">

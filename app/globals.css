@@ -29,3 +29,21 @@
     scale: 1;
   }
 }
+
+.slide-left {
+  animation: slideInLeft 1s forwards cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: rotate(5deg);
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+  }
+  30%,
+  100% {
+    opacity: 1;
+    scale: 1.05;
+  }
+}
