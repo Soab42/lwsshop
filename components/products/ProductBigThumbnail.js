@@ -12,7 +12,7 @@ export default function ProductBigThumbnail({
       onMouseLeave={onMouseLeave}
       className="w-full overflow-hidden "
     >
-      <div className="relative w-[800px] h-[500px] mx-auto overflow-hidden">
+      <div className="relative w-[45rem] h-[35rem] mx-auto overflow-hidden">
         <div className="absolute inset-0 transition-transform transform duration-700 hover:scale-125">
           <Image
             src={thumbLink}
