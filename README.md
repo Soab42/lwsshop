@@ -18,4 +18,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Explore lws shop
 
-Live link: [lwsshop.vercel.app](https:lwsshp.vercel.app)
+Live link: [lwsshop.vercel.app](https://lwsshop.vercel.app)
