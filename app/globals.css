@@ -20,12 +20,10 @@
 
 @keyframes fadeIn {
   0% {
-    opacity: 0;
     scale: 0.9;
   }
   30%,
-  99% {
-    opacity: 1;
+  100% {
     scale: 1;
   }
 }
