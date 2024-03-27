@@ -12,7 +12,7 @@ export default function ProductSmallThumbnail({
       className={`mx-auto border object-cover ${
         imageIndex === id
           ? "ring-1 duration-500 rounded-md shadow-sm shadow-black"
-          : "duration-500"
+          : "duration-500 filter grayscale "
       }`}
       alt={image}
       width={100}
