@@ -42,7 +42,7 @@ export default function Category() {
       {categories.map((category) => (
         <Link
           key={category}
-          className={`hover:border-b border-black block h-9 p-2 box-border mt-4 duration-500 ${
+          className={`hover:border-b border-black block h-9 p-2 box-border mt-4 duration-500 capitalize ${
             isActive(category) ? "active" : ""
           }`}
           href={`/${formatCategoryName(category)}`}
